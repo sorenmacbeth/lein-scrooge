@@ -37,9 +37,25 @@ filenames.
 
 The following settings are supported: 
 
-    $ example here.
-      what happens if i wrap
-hlike so.
+    (defproject ...
+     :scrooge {
+
+       ;; scrooge compiler supports Java and Scala. (Haven't tested with Scala yet. User beware)
+       :language "Java"
+       
+       ;; generates Finagle classes (see https://github.com/twitter/finagle)
+       :finagle true
+
+       :thrift {
+         
+         ;; directory that will be used to find Thrift IDL files for compilation
+         :include-path "src/thrift"
+
+         ;; path where generated source files will be placed (default is "src/<language>")
+         :destination-path "src/java"
+       }
+     }
+    )
 
 ## License
 
