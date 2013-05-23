@@ -24,7 +24,7 @@ Put `[lein-scrooge "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project
     $ lein scrooge
 
 When no arguments are provided, the plugin will search for thrift files in the directory
-specified by the :include-path in your project file (see below). If no `:include-path` 
+specified by the `:include-path` in your project file (see below). If no `:include-path` 
 has been specified, the plugin will default to searching "src/thrift".
 
     $ lein scrooge <file1> <file2> ... <fileN>
@@ -37,7 +37,9 @@ filenames.
 
 The following settings are supported: 
 
-    $ example here..
+    $ example here.
+      what happens if i wrap
+hlike so.
 
 ## License
 
