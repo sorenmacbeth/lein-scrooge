@@ -6,9 +6,14 @@ A Leiningen plugin to run the Twitter Scrooge compiler on thrift IDL files
 
 Use this for user-level plugins:
 
+### Leiningen 2.x
+
 Put `[lein-scrooge "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your
-`:user` profile, or if you are on Leiningen 1.x do `lein plugin install
-lein-scrooge 0.1.0-SNAPSHOT`.
+`:user` profile
+
+### Leiningen 1.x 
+
+`lein plugin install lein-scrooge 0.1.0-SNAPSHOT`.
 
 Use this for project-level plugins:
 
