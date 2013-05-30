@@ -10,7 +10,7 @@
 (defn scrooge
   "Run Twitter Scrooge compiler on Thrift IDL files"
   [project & args]
-  (let [include-path  (get-in project [:scrooge :thrift-include-path])
+  (let [include-path  (or (get-in project [:scrooge :thrift-include-path]) "src/thrift")
         language      (or (get-in project [:scrooge :language]) "Java")
         dest-src-path (or (get-in project [:scrooge :thrift-destination-path])
                           (:java-source-path project)
