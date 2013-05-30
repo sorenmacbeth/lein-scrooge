@@ -8,16 +8,16 @@ Use this for user-level plugins:
 
 ##### Leiningen 2.x
 
-Put `[lein-scrooge "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your
+Put `[lein-scrooge "0.1.0"]` into the `:plugins` vector of your
 `:user` profile
 
 ##### Leiningen 1.x 
 
-`lein plugin install lein-scrooge 0.1.0-SNAPSHOT`.
+`lein plugin install lein-scrooge 0.1.0`.
 
 Use this for project-level plugins:
 
-Put `[lein-scrooge "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+Put `[lein-scrooge "0.1.0"]` into the `:plugins` vector of your project.clj.
 
 ## Usage
 
