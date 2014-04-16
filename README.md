@@ -42,22 +42,20 @@ The following settings are supported:
      ;; if set, generated java source will be placed here automatically
      :java-source-path "src/java"
 
-     :scrooge {
+     ;; scrooge compiler supports Java and Scala. (Haven't tested with Scala yet. User beware)
+     :language "Java"
+     
+     ;; generates Finagle classes (see https://github.com/twitter/finagle)
+     :finagle true
 
-       ;; scrooge compiler supports Java and Scala. (Haven't tested with Scala yet. User beware)
-       :language "Java"
+     ;; directory that will be used to find Thrift IDL files for compilation
+     :thrift-include-path "src/thrift"
        
-       ;; generates Finagle classes (see https://github.com/twitter/finagle)
-       :finagle true
-
-       ;; directory that will be used to find Thrift IDL files for compilation
-       :thrift-include-path "src/thrift"
-         
-       ;; can be used to explicitly set destination of generated source files.
-       ;; if generating java source, then java-source-path will be used by default.
-       ;; fallback default is "src/<language>"
-       :thrift-destination-path "src/java"
-     }
+     ;; can be used to explicitly set destination of generated source files.
+     ;; if generating java source, then java-source-path will be used by default.
+     ;; fallback default is "src/<language>"
+     :thrift-destination-path "src/java"
+     
     )
 
 ## License

@@ -10,14 +10,13 @@
 (defn scrooge
   "Run Twitter Scrooge compiler on Thrift IDL files"
   [project & args]
-  (let [include-path  (or (get-in project [:scrooge :thrift-include-path]) "src/thrift")
-        language      (or (get-in project [:scrooge :language]) "Java")
-        dest-src-path (or (get-in project [:scrooge :thrift-destination-path])
-                          (:java-source-path project)
+  (let [include-path  (or (get-in project [:thrift-include-path]) "src/thrift")
+        language      (or (get-in project [:language]) "Java")
+        dest-src-path (or (get-in project [:thrift-destination-path])
                           (format "src/%s" (clojure.string/lower-case language)))
         compiler-args ["-l" language
                        "-d" dest-src-path]
-        compiler-args (if (true? (get-in project [:scrooge :finagle]))
+        compiler-args (if (true? (get-in project [:finagle]))
                         (conj compiler-args "--finagle")
                         compiler-args)
         compiler-args (if include-path
