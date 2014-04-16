@@ -39,9 +39,6 @@ The following settings are supported:
 
     (defproject ...
 
-     ;; if set, generated java source will be placed here automatically
-     :java-source-path "src/java"
-
      ;; scrooge compiler supports Java and Scala. (Haven't tested with Scala yet. User beware)
      :language "Java"
      
